@@ -1,0 +1,201 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CDRC LAB</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="books.css">
+    <script src="phd.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="container1">
+            <img src="images/CDRC_logo.jpg" alt="CDRC Logo">
+        </div>
+        <div class="container2">
+            <img src="images/EMC2_logo.jpg" alt="EMC2 Logo">
+        </div>
+        <div class="container3">
+          <img src="images/logo-light.gif" alt="">
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-size: larger;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="home.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownPeople" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">People</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPeople">
+                        <a class="dropdown-item" href="faculty.html">Faculty</a>
+                        <a class="dropdown-item" href="advisory.html">Advisory Board</a>
+                        <a class="dropdown-item" href="alumni.html">CDRC Alumni</a>
+                        <a class="dropdown-item" href="research_engg.html">Research Engineer</a>
+                        <a class="dropdown-item" href="phd.html">PhD Scholars</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownResearch" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Facilities</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownResearch">
+                        <a class="dropdown-item" href="hardware.html">List of Hardware</a>
+                        <a class="dropdown-item" href="software.html">List of Software</a>
+                        <a class="dropdown-item" href="infrastructure.html">Infrastructure</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownCollaborations" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collaborations</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownCollaborations">
+                        <a class="dropdown-item" href="industrial_collab.html">Industrial Collaborations</a>
+                        <a class="dropdown-item" href="academic_collab.html">Academic Collaborations</a>
+                        <!-- <a class="dropdown-item" href="#">Power Systems</a> -->
+                        <!-- <a class="dropdown-item" href="#">Control Systems</a> -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownActivities" role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivities">
+                        <!-- Technical Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Technical</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://drive.google.com/drive/folders/1edwXXfLUYIpTrmejfeHzBdy99pNKJoxp?usp=sharing" class="dropdown-item">Robotics Workshop</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1z2Fq6QVLwKguca1dbnBrLBvqH8az1UPg?usp=sharing" class="dropdown-item">SLAC Standford</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1bpB2an0GOQ7NjOkxxWE4wRRD6oila3X4?usp=sharing" class="dropdown-item">Prof S.D.V Lecture</a></li>
+
+                            </ul>
+                        </li>
+                        <!-- Non-Technical Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Non-Technical</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://drive.google.com/drive/folders/1pbk-ujaMGA6KxiO4CvWw1CVEs-FJZsas?usp=sharing" class="dropdown-item">GetTogether</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1YRzpwMh4AxuxMRkzepG2LJnBrVyon96l?usp=sharing" class="dropdown-item">Soft Launch</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1vPlsxAiOYbjOWUfXu_T4_aQ_piUbgFLf?usp=sharing" class="dropdown-item">Visitors</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1XmJMYR7-9LXfUQYrkCmJkruZZoRYHoZL?usp=sharing" class="dropdown-item">Visit for Bay Area</a></li>
+
+                            </ul>
+                            
+                        </li>
+
+                        
+                    </ul>
+                </li>
+ 
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownPublications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPublications">
+                        <a class="dropdown-item" href="books.html">Books</a>
+                        <a class="dropdown-item" href="conference.html">Conference</a>
+                        <a class="dropdown-item" href="journal.html">Journal Papers</a>
+                    </div>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownGallery" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGallery">
+                        <a class="dropdown-item" href="#">FDP/Workshops</a>
+                        <a class="dropdown-item" href="#">Trips and Other</a>
+                        <a class="dropdown-item" href="#">Conference</a>
+                    </div>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://drive.google.com/drive/folders/1QgmFqPBw7pbbOG-LPkQfKHI1FCJDgZ5c?usp=sharing">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="museum.html">Museum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://sites.google.com/ee.vjti.ac.in/mr-vijay-sonavane/pnc-issues">PNC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://sites.google.com/ee.vjti.ac.in/actual-virtual-machines-lab/home">Labs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="career&internships.html">Career & Internships</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact_us.html">Contact Us</a>
+                </li>
+                </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <u><p class="h1">Books Published</p></u>
+    </div>
+    <div class="main">
+        <ol>
+            <li>
+         <a href="https://www.researchgate.net/publication/331281033_Synchronization_of_Open_Systems_Application_to_the_Lossy_Power_Grid">
+            Synchronization of Open Systems: Application to power system Dynamics and Stability”, by Madhavi Parimi, Sushama. Wagh, and Navdeep Singh. Scholar’s Press. 
+         </a> 
+        </li>
+        <li>
+            <a href="https://www.abebooks.com/9783330071247/Synchronization-Complex-Network-Power-System-3330071249/plp">
+                Synchronization in Complex Network: Power System Transient Stability”, S. Kulkarni, S. Wagh, N. M. Singh, LAP LAMBERT Academic Publishing, Germany, June 2017, ISBN-13: 978-3330071247.
+            </a>
+        </li>  
+        <li>
+            <a href="https://www.morebooks.de/shop-ui/shop/product/978-3-659-32706-3">Power System Transient Stability Enhancement”, by S. Wagh, LAP LAMBERT Academic Publishing, Germany, May 2013, ISBN-13: 978-3659327063.</a>
+        </li>
+        <li>
+            <a href="https://www.researchgate.net/publication/281826511_PIC_Simulation_and_Analysis_of_an_Axial_Vircator_Using_MAGIC_Electromagnetic_and_Plasma_Application">PIC Simulation and Analysis of an Axial Vircator Using MAGIC, Electromagnetic and Plasma Application”, by M. Maiti, N. Singh and S. Wagh, LAP LAMBERT Academic publishing, Germany, Sep 2012</a>
+        </li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <u><p class="h1">Book Chapters Published</p></u>
+    </div>
+    <div class="main">
+    <ol>
+        <li>
+        <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003122326-10/blockchain-based-decentralized-flexible-transparent-energy-market-mohd-adil-sheikh-vaishali-kamuni-mohit-fulpagare-udaykumar-suryawanshi-sushama-wagh-navdeep-singh"> Sheikh, M.A., Kamuni, V., Fulpagare, M., Suryawanshi, U., Wagh, S. and Singh, N.M., 2021.
+Blockchain-based Decentralized, Flexible, and Transparent Energy Market. In Flexibility
+in Electric Power Distribution Networks (pp. 233-253). CRC Press.
+        </a> </li>
+        <li>
+            <a href="https://www.amazon.in/Phase-Locked-Loops-Structure-Functions-Applications/dp/1536183385">K.Sonam, S. R. Wagh, and N. M. Singh, “Chapter 7: Phase-Locked Loop Design For Grid Inverter” ,pp. 185-204, 2020, Phase-Locked Loops: Structure, functions and Applications, Nova science publisher</a>
+        </li>
+        <li>
+            <a href="https://www.researchgate.net/publication/327483123_Harmonic_Mitigation_for_VSI_Using_DP-Based_PI_Controller">Harmonic mitigation for VSI using DP-based PI controller by R. Meshram, M. Madhusoodan, S. R. Wagh, N. M.  Singh and A. Stanković, Invited book chapter in In-Tech Open book publication - Accepted for publication in Dec 2017.
+
+            </a>
+        </li>
+        <li>
+            <a href="https://www.researchgate.net/publication/281653818_Neural_Network_Based_Early_Warning_System_for_an_Emerging_Blackout_in_Smart_Grid_Power_Networks">Neural network based early warning system for an emerging blackout in smart grid power networks by S Gupta, F Kazi, S Wagh, R Kambli, Intelligent Distributed Computing, Springer International Publishing, pp. 173-183, Switzerland, 2015. 
+
+            </a>
+        </li>
+    </ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="bg-dark text-white text-center py-3">
+        &copy; CDRC, VJTI 2024 All rights reserved.<br>
+        Website Developed By: Prachi Anand Kesarkar
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    </body>
+    </html>

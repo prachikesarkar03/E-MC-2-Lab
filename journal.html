@@ -1,0 +1,794 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CDRC LAB</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="journal.css">
+    <script src="phd.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="container1">
+            <img src="images/CDRC_logo.jpg" alt="CDRC Logo">
+        </div>
+        <div class="container2">
+            <img src="images/EMC2_logo.jpg" alt="EMC2 Logo">
+        </div>
+        <div class="container3">
+          <img src="images/logo-light.gif" alt="">
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-size: larger;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="home.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownPeople" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">People</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPeople">
+                        <a class="dropdown-item" href="faculty.html">Faculty</a>
+                        <a class="dropdown-item" href="advisory.html">Advisory Board</a>
+                        <a class="dropdown-item" href="alumni.html">CDRC Alumni</a>
+                        <a class="dropdown-item" href="research_engg.html">Research Engineer</a>
+                        <a class="dropdown-item" href="phd.html">PhD Scholars</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownResearch" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Facilities</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownResearch">
+                        <a class="dropdown-item" href="hardware.html">List of Hardware</a>
+                        <a class="dropdown-item" href="software.html">List of Software</a>
+                        <a class="dropdown-item" href="infrastructure.html">Infrastructure</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownCollaborations" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collaborations</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownCollaborations">
+                        <a class="dropdown-item" href="industrial_collab.html">Industrial Collaborations</a>
+                        <a class="dropdown-item" href="academic_collab.html">Academic Collaborations</a>
+                        <!-- <a class="dropdown-item" href="#">Power Systems</a> -->
+                        <!-- <a class="dropdown-item" href="#">Control Systems</a> -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownActivities" role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivities">
+                        <!-- Technical Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Technical</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://drive.google.com/drive/folders/1edwXXfLUYIpTrmejfeHzBdy99pNKJoxp?usp=sharing" class="dropdown-item">Robotics Workshop</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1z2Fq6QVLwKguca1dbnBrLBvqH8az1UPg?usp=sharing" class="dropdown-item">SLAC Standford</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1bpB2an0GOQ7NjOkxxWE4wRRD6oila3X4?usp=sharing" class="dropdown-item">Prof S.D.V Lecture</a></li>
+
+                            </ul>
+                        </li>
+                        <!-- Non-Technical Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Non-Technical</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://drive.google.com/drive/folders/1pbk-ujaMGA6KxiO4CvWw1CVEs-FJZsas?usp=sharing" class="dropdown-item">GetTogether</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1YRzpwMh4AxuxMRkzepG2LJnBrVyon96l?usp=sharing" class="dropdown-item">Soft Launch</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1vPlsxAiOYbjOWUfXu_T4_aQ_piUbgFLf?usp=sharing" class="dropdown-item">Visitors</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1XmJMYR7-9LXfUQYrkCmJkruZZoRYHoZL?usp=sharing" class="dropdown-item">Visit for Bay Area</a></li>
+
+                            </ul>
+                            
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownPublications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPublications">
+                        <a class="dropdown-item" href="books.html">Books</a>
+                        <a class="dropdown-item" href="conference.html">Conference</a>
+                        <a class="dropdown-item" href="journal.html">Journal Papers</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://drive.google.com/drive/folders/1QgmFqPBw7pbbOG-LPkQfKHI1FCJDgZ5c?usp=sharing">Gallery</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownGallery" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGallery">
+                        <a class="dropdown-item" href="#">FDP/Workshops</a>
+                        <a class="dropdown-item" href="#">Trips and Other</a>
+                        <a class="dropdown-item" href="#">Conference</a>
+                    </div>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="museum.html">Museum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://sites.google.com/ee.vjti.ac.in/mr-vijay-sonavane/pnc-issues">PNC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://sites.google.com/ee.vjti.ac.in/actual-virtual-machines-lab/home">Labs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="career&internships.html">Career & Internships</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact_us.html">Contact Us</a>
+                </li>
+                </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <u><p class="h1">Journals Published</p></u>
+    </div>
+    <div class="main">
+        <ol>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:LPZeul_q3PIC">Unified Control Framework for Optimization: A Fresh Perspective on Constrained Optimization, Optimization-based
+                     Control, and Parameter Estimation
+                    R Gunjal, SS Nayyer, S Wagh, N Singh
+                    arXiv preprint arXiv:2407.00780</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:8AbLer7MMksC">Controlled gradient descent: A control theoretical perspective for optimization
+                    R Gunjal, SS Nayyer, SR Wagh, NM Singh
+                    Results in Control and Optimization 15, 100417</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:geHnlv5EZngC">Synchronization of uncertain chaotic systems with minimal parametric information
+                    SS Nayyer, R Gunjal, SR Wagh, NM Singh
+                    Physica D: Nonlinear Phenomena 460, 134059</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:sSrBHYA8nusC">Nesterov’s accelerated gradient descent: The controlled contraction approach
+                    R Gunjal, SS Nayyer, S Wagh, NM Singh
+                    IEEE Control Systems Letters</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:4fKUyHm3Qg0C">Estimating the Faults/Attacks using a Fast Adaptive Unknown Input Observer: An Enhanced LMI Approach
+                    S Mohite, A Sheikh, SR Wagh
+                    arXiv preprint arXiv:2312.05026</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:tOudhMTPpwUC">Granger Causality for prediction in Dynamic Mode Decomposition: Application to power systems
+                    R Gunjal, SS Nayyer, SR Wagh, AM Stankovic, NM Singh
+                    Electric Power Systems Research 225, 109865</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:B3FOqHPlNUQC">Enhancing Biometric Speaker Recognition Through MFCC Feature Extraction and Polar Codes for Remote Application
+                    N Wankhede, S Wagh
+                    IEEE Access 11, 133921-133930</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:WbkHhVStYXYC">On Exact Embedding Framework for Optimal Control of Markov Decision Processes
+                    S Kharade, S Sutavani, A Yerudkar, S Wagh, Y Liu, C Del Vecchio, ...
+                    IEEE Transactions on Automatic Control</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:K3LRdlH-MEoC">Cooperative communication for safety message dissemination in unsaturated networks with varying contention windows
+                    N Septa, S Wagh
+                    International Journal of Communication Systems 36 (11), e5508</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:l7t_Zn2s7bgC">Emergency Message Distribution in Vehicular Networks with Fuzzy Logic Model at MAC and Network Layer
+                    N Septa, S Wagh
+                    2023 IEEE International Conference on Industry 4.0, Artificial Intelligence …</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:tS2w5q8j5-wC">Thermal Monitoring of Transformer via Finite Time Parameter Estimator
+                    S Yaqub, B Devangee, G Revati, S Shadab, SR Wagh
+                    2023 9th International Conference on Control, Decision and Information …</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:vRqMK49ujn8C">Transfer Function Modeling Approach for Inverter-Dominated Grid
+                    B Devangee, C Wagh, SR Wagh, NM Singh, AM Stankovic
+                    2023 9th International Conference on Control, Decision and Information …</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:08ZZubdj9fEC">Speed Estimation of Induction Motor Using Gaussian Process Regression
+                    C Wagh, C Shivam, G Revati, S Shadab, SR Wagh
+                    2023 9th International Conference on Control, Decision and Information …</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:NhqRSupF_l8C">Optimal control of probabilistic Boolean control networks: A scalable infinite horizon approach
+                    S Kharade, S Sutavani, S Wagh, A Yerudkar, C Del Vecchio, N Singh
+                    International Journal of Robust and Nonlinear Control 33 (9), 4945-4966</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:Tiz5es2fbqcC">A new perspective of accelerated gradient methods: The controlled invariant manifold approach
+                    R Gunjal, S Wagh, SS Nayyer, A Stankovic, NM Singh
+                    arXiv preprint arXiv:2305.10756</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:738O_yMBCRsC">Optimization of contention window and relay selection for efficient routing using fuzzy logic model
+                    N Septa, S Wagh
+                    IEEE Access 11, 36993-37005</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:nb7KW1ujOQ8C">Finite-time parameter estimation for an online monitoring of transformer: A system identification perspective
+                    S Shadab, G Revati, SR Wagh, NM Singh
+                    International Journal of Electrical Power & Energy Systems 145, 108639</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:p2g8aNsByqUC">Passivity and immersion (p&i) approach with gaussian process for stabilization and control of nonlinear systems
+                    SS Nayyer, J Hozefa, R Gunjal, SK Bhil, SR Wagh, NM Singh
+                    IEEE Access 10, 132621-132634</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:XiSMed-E-HIC">Evaluation of Optimal Strategy under False Data Injection Attack On Power System: A Reinforcement Learning Approach
+                    G Revati, S Shadab, K Sonam, SR Wagh, NM Singh
+                    2022 Eighth Indian Control Conference (ICC), 397-402</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:u9iWguZQMMsC">Model-free Optimization: The Exploration-Exploitation Paradigm
+                    M Raphel, R Gunjal, SR Wagh, NM Singh
+                    2022 Eighth Indian Control Conference (ICC), 422-427</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:OU6Ihb5iCvQC">Passivity and immersion (p&i) approach for constructive stabilization and control of nonlinear systems
+                    SS Nayyer, SR Wagh, NM Singh
+                    IEEE Control Systems Letters 7, 817-822</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:uWQEDVKXjbEC">Adaptive control of feedback linearizable systems with finite-time convergence C Chaitali, J Swapnil, S Shadab, SR Wagh, NM Singh
+                    2022 Australian & New Zealand Control Conference (ANZCC), 75-80</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:SP6oXDckpogC">Optimization of Surrogate function using Extremum Seeking Control
+                    M Raphel, R Gunjal, SR Wagh, NM Singh
+                    2022 Australian & New Zealand Control Conference (ANZCC), 51-56</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:dshw04ExmUIC">Passivity and immersion based-modified gradient estimator: A control perspective in parameter estimation
+                    SS Nayyer, G Revati, SR Wagh, NM Singh
+                    arXiv preprint arXiv:2211.10674</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:UxriW0iASnsC">Passivity and Immersion based-modified gradient estimator: A control perspective in parameter estimation
+                    S Shadab Nayyer, G Revati, SR Wagh, NM Singh
+                    arXiv e-prints, arXiv: 2211.10674</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:KxtntwgDAa4C">Granger Causality for Predictability in Dynamic Mode Decomposition
+                    G Revati, S Shadab, K Sonam, SR Wagh, NM Singh
+                    arXiv preprint arXiv:2210.12737</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:1sJd4Hv_s6UC">Towards a constructive framework for stabilization and control of nonlinear systems: Passivity and immersion (p\&i) approach
+                    SS Nayyer, SR Wagh, NM Singh
+                    arXiv preprint arXiv:2208.10539</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:EUQCXRtRnyEC">Gaussian process surrogate model for an effective life assessment of transformer considering model and measurement uncertainties
+                    S Shadab, J Hozefa, K Sonam, S Wagh, NM Singh
+                    International Journal of Electrical Power & Energy Systems 134, 107401</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:CHSYGLWDkRkC">Effect of increased number of covid-19 tests using supervised machine learning models
+                    W Pooja, N Snehal, K Sonam, SR Wagh, NM Singh
+                    2021 Australian & New Zealand Control Conference (ANZCC), 131-136</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:xtRiw3GOFMkC">Control of an Acrobot system using reinforcement learning with probabilistic policy search
+                    N Snehal, W Pooja, K Sonam, SR Wagh, NM Singh
+                    2021 Australian & New Zealand Control Conference (ANZCC), 68-73</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:abG-DnoFyZgC">Optimal control of probabilistic boolean networks: An information-theoretic approach
+                    K Sonam, S Sutavani, SR Wagh, NM Singh
+                    IEEE Access 9, 157068-157082</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:pyW8ca7W8N0C">Blockchain-based decentralized, flexible, and transparent energy market
+                    MA Sheikh, V Kamuni, M Fulpagare, U Suryawanshi, S Wagh, NM Singh
+                    Flexibility in Electric Power Distribution Networks, 233-253</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:bFI3QPDXJZMC">Adaptive control of nonlinear systems: Parametric and non-parametric approach
+                    J Hozefa, S Shadab, G Revati, SR Wagh, NM Singh
+                    2021 29th Mediterranean Conference on Control and Automation (MED), 1007-1012</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:f2IySw72cVMC">Smart building energy management: Load profile prediction using machine learning
+                    G Revati, J Hozefa, S Shadab, A Sheikh, SR Wagh, NM Singh
+                    2021 29th Mediterranean Conference on Control and Automation (MED), 380-385</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:b0M2c_1WBrUC">Disturbance Rejection and Harmonic mitigation for Solid State Transformer through Passivity Based Control
+                    M Monika, R Meshram, S Wagh
+                    2021 IEEE 30th International Symposium on Industrial Electronics (ISIE), 1-6</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:_xSYboBqXhAC">Optimal control of probabilistic Boolean network using embedding framework
+                    K Sonam, S Sutavani, SR Wagh, FS Kazi, NM Singh
+                    2021 American Control Conference (ACC), 1028-1033</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:D03iK_w7-QYC">Parameter convergence for adaptive control in nonlinear system
+                    S Shadab, J Hozefa, SR Wagh, NM Singh
+                    2020 Australian and New Zealand Control Conference (ANZCC), 42-47</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:zA6iFVUQeVQC">On the geometry and linear convergence of primal-dual dynamics
+                    P Bansode, V Chinde, SR Wagh, R Pasumarthy, NM Singh
+                    arXiv preprint arXiv:2010.02738</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:rO6llkc54NcC">Hamiltonian monte carlo based path integral for stochastic optimal control
+                    P Akshay, D Vrushabh, K Sonam, S Wagh, N Singh
+                    2020 28th Mediterranean Conference on Control and Automation (MED), 254-259</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:3s1wT3WcHBgC">Prediction and classification of temperature data in smart building using dynamic mode decomposition
+                    K Sunny, A Sheikh, S Wagh, NM Singh
+                    2020 28th Mediterranean Conference on Control and Automation (MED), 1074-1079</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:ZHo1McVdvXMC">Robust path integral control on stochastic differential games
+                    D Vrushabh, P Akshay, K Sonam, S Wagh, NM Singh
+                    2020 28th Mediterranean Conference on Control and Automation (MED), 665-670</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:cFHS6HbyZ2cC">Real-time simulation for torque ripple minimization of bldc motor using low pass compensator
+                    P Karekar, C Shrutika, S Shadab, BB Pimple, SR Wagh
+                    2020 International Conference on Electrical Machines (ICEM) 1, 1213-1218</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:SeFeTyx0c_EC">Adaptive Dynamic Programming for Optimal Synchronization of Kuramoto Oscillator
+                    D Vrushabh, K Shalini, K Sonam, S Wagh, NM Singh
+                    2020 American Control Conference (ACC), 1755-1760</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:dfsIfKJdRG4C">Enhancing the performance index of battery management system using nonlinear approach
+                    S Mohite, S Shadab, A Sheikh, S Wagh
+                    2020 7th International Conference on Control, Decision and Information …</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:4OULZ7Gr8RgC">Dynamic mode decomposition for prediction and enhancement of rotor angle stability
+                    K Sunny, A Sheikh, S Wagh
+                    2020 7th International Conference on Control, Decision and Information …</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:SeFeTyx0c_EC">Adaptive Dynamic Programming for Optimal Synchronization of Kuramoto Oscillator
+                    D Vrushabh, K Shalini, K Sonam, S Wagh, NM Singh
+                    2020 American Control Conference (ACC), 1755-1760</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:dfsIfKJdRG4C">Enhancing the performance index of battery management system using nonlinear approach
+                    S Mohite, S Shadab, A Sheikh, S Wagh
+                    2020 7th International Conference on Control, Decision and Information …</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:4OULZ7Gr8RgC">Dynamic mode decomposition for prediction and enhancement of rotor angle stability
+                    K Sunny, A Sheikh, S Wagh
+                    2020 7th International Conference on Control, Decision and Information …</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:fPk4N6BV_jEC">Application of regression based speed estimation for sensorless vector controlled im drive
+                    S Shadab, M Ankit, J Hozefa, C Shrutika, S Mohite, S Wagh
+                    2020 7th International Conference on Control, Decision and Information …</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:u_35RYKgDlwC">Application of dynamic mode decomposition for temperature analysis in smart building
+                    K Sunny, A Sheikh, S Wagh
+                    2020 7th International Conference on Control, Decision and Information …</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:HoB7MX3m0LUC">Design of Robust Gradient Method for Convex Optimization Problem using Biased Integral Quadratic Constraints
+                    M Sawant, J Moyalan, S Sutavani, K Sonam, R Pasumarthy, S Wagh
+                    2020 European Control Conference (ECC), 368-373</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:RYcK_YlVTxYC">Secured energy trading using byzantine-based blockchain consensus
+                    A Sheikh, V Kamuni, A Urooj, S Wagh, N Singh, D Patel
+                    IEEE Access 8, 8554-8571</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:pqnbT2bcN3wC">Optimal Scheduling of TCL and Storage Devices for Demand Side Management: A Game Theoretic Approach
+                    U Bhagyashree, M Sawant, J Moyalan, K Alok, A Sheikh, S Wagh
+                    2019 9th International Conference on Power and Energy Systems (ICPES), 1-6</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:g5m5HwL7SMYC">Tracing Voltage Collapse Point for Non-uniform Loading Using Holomorphic Embedding
+                    F Mohit, C Shrutika, K Sonam, S Wagh
+                    2019 9th International Conference on Power and Energy Systems (ICPES), 1-6</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:M05iB0D1s5AC">Cyber attack and fault identification of hvac system in building management systems
+                    A Sheikh, V Kamuni, A Patil, S Wagh, N Singh
+                    2019 9th international conference on power and energy systems (ICPES), 1-6</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:ldfaerwXgEUC">A machine learning approach to distinguish faults and cyberattacks in smart buildings
+                    A Patil, V Kamuni, A Sheikh, S Wagh, N Singh
+                    2019 9th International Conference on Power and Energy Systems (ICPES), 1-6</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:hMod-77fHWUC">Building Temperature Control: A Distributed Escort Dynamical approach
+                    M Sawant, J Moyalan, J Koonamparampath, A Sheikh, S Wagh, N Singh
+                    2019 9th International Conference on Power and Energy Systems (ICPES), 1-6</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:RGFaLdJalmkC">Interarea Oscillations & Chimera in Power Systems
+                    PK Bajaria, SR Wagh, NM Singh
+                    arXiv preprint arXiv:1911.10338</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:2P1L_qKh6hAC">Impact of temperature on state of charge estimation for an electric vehicle
+                    S Mohite, U Suryawanshi, A Sheikh, S Wagh, NM Singh
+                    2019 North American Power Symposium (NAPS), 1-6</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:70eg2SAEIzsC">Robust Control of Solid State Transformer using Dynamic Phasor based model with dq transformation
+                    M Monika, R Meshram, S Wagh, NM Singh, AM Stanković
+                    2019 North American Power Symposium (NAPS), 1-6</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:35N4QoGY0k4C">Bifurcation point tracking in generator outage scenario using nested holomorphic embedding power flow method
+                    U Bhagyashree, K Sonam, SR Wagh, NM Singh
+                    2019 North American Power Symposium (NAPS), 1-6</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:vV6vV6tmYwMC">Synchronized Operating Point Stability of Multimachine Power System using Holomorphic Embedding in Kuramoto Framework
+                    K Sonam, SR Wagh, NM Singh
+                    2019 North American Power Symposium (NAPS), 1-6</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:M3NEmzRMIkIC">Accelerated distributed primal-dual dynamics using adaptive synchronization
+                    PA Bansode, KC Kosaraju, SR Wagh, R Pasumarthy, NM Singh
+                    IEEE Access 7, 120424-120440</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:NMxIlDl6LWMC">Disturbance decoupling and instantaneous fault detection in Boolean Control Networks
+                    S Sutavani, K Sonam, S Wagh, N Singh
+                    arXiv preprint arXiv:1908.05235</a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:BqipwSGYUEgC">A blockchain construct for energy trading against sybil attacks
+                    U Asfia, V Kamuni, S Sutavani, A Sheikh, S Wagh, NM Singh
+                    2019 27th Mediterranean Conference on Control and Automation (MED), 422-427</a>
+            </li>
+    
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:YFjsv_pBGBYC">Power grid load management using electric vehicles: A distributed resource allocation approach
+                M Sawant, J Moyalan, U Bhagyashree, A Sheikh, S Wagh, N Singh
+                2019 27th Mediterranean Conference on Control and Automation (MED), 428-433</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:O3NaXMp0MMsC">Energy trading of electric vehicles using blockchain and smart contracts
+                U Asfia, V Kamuni, A Sheikh, S Wagh, D Patel
+                2019 18th European control conference (ECC), 3958-3963</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:JV2RwH3_ST0C">Electric vehicle-power grid incorporation using distributed resource allocation approach
+                J Moyalan, M Sawant, U Bhagyashree, A Sheikh, S Wagh, N Singh
+                2019 18th European Control Conference (ECC), 3034-3039</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:blknAaTinKkC">On the exponential stability of projected primal-dual dynamics on a riemannian manifold
+                PA Bansode, V Chinde, SR Wagh, R Pasumarthy, NM Singh
+                arXiv preprint arXiv:1905.04521</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:k_IJM867U9cC">Development of dynamic phasor based higher index model for performance enhancement of dual active bridge
+                M Monika, M Rane, S Wagh, AM Stanković, NM Singh
+                Electric Power Systems Research 168, 305-312</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:maZDTaKrznsC">Mitigation of harmonics and unbalanced source voltage condition in standalone microgrid: positive sequence component and dynamic phasor based compensator with real-time approach
+                M Rane, S Wagh
+                Heliyon 5 (2)</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:isC4tDSrTZIC">Harmonic Mitigation for VSI Using DP-Based PI Controller
+                R Meshram, M Madhusoodan, S Wagh
+                Compendium of New Techniques in Harmonic Analysis</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:_Qo2XoVZTnwC">Distributed self triggered control for asymptotic synchronization in inverter based microgrids
+                A Deshpande, P Bansode, SR Wagh, NM Singh
+                International Journal of Dynamics and Control 6, 1150-1159</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:RHpTSmoSYBkC">Bond graph approach for port-controlled Hamiltonian modeling for SST
+                RV Meshram, SV Khade, SR Wagh, NM Singh, AM Stanković
+                Electric Power Systems Research 158, 105-114</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:TFP_iSt0sucC">Finite control set model predictive control for two level inverter with fixed switching frequency
+                P Nikhil, K Sonam, M Monika, S Wagh
+                2018 SICE International Symposium on Control Systems (SICE ISCS), 74-81</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:yD5IFk8b50cC">Engineering Applications
+                M Parimi, S Kulkarni, SR Wagh, NM Singh, T Ezzedine, M Miladi, ...</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:r0BpntZqJG4C">Augmenting WAMPAC with machine learning tools for early warning and mitigation of blackout events
+                S Gupta, F Kazi, S Wagh, N Singh
+                International Journal of Humanitarian Technology 1 (1), 83-100</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:R3hNpaxXUhUC">Analysis and prediction of vulnerability in smart power transmission system: A geometrical approach
+                S Gupta, F Kazi, S Wagh, N Singh
+                International Journal of Electrical Power & Energy Systems 94, 77-87</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:e5wmG9Sq2KIC">Port-controlled phasor Hamiltonian modeling and IDA-PBC control of solid-state transformer
+                RV Meshram, M Bhagwat, S Khade, SR Wagh, AM Stanković, NM Singh
+                IEEE Transactions on Control Systems Technology 27 (1), 161-174</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:j3f4tGmQtD8C">Stability enhancement of transformered PV system using inrush mitigation techniques
+                M Rane, S Wagh
+                2017 North American Power Symposium (NAPS), 1-6</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:4JMBOYKVnBMC">Internal model control of solid state transformer for microgrid stability enhancement
+                M Monika, R Meshram, S Wagh, AM Stankovic
+                2017 North American Power Symposium (NAPS), 1-6</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:GnPB-g6toBAC">Investigating the structural properties of ER-ES PN model to define liveness of the system
+                S Deshmukh, K Sarda, S Sutavani, S Wagh
+                2017 European Conference on Circuit Theory and Design (ECCTD), 1-4</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:TQgYirikUcIC">Multi-winding phase-shifting transformer for 36-pulse rectifier: winding turns design and analysis
+                AD Gaonkar, RG Rane, SR Wagh, NM Singh
+                2016 North American Power Symposium (NAPS), 1-6</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:HDshCWvjkbEC">Synchronization and integrability of N-machine system with transfer conductances
+                M Parimi, S Kulkarni, S Wagh, K Kumar, F Kazi, N Singh
+                2016 IEEE Power and Energy Society General Meeting (PESGM), 1-5</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:mB3voiENLucC">Decomposition of drift vector field: An application to multi-machine transient stability enhancement
+                S Kulkarni, M Parimi, S Wagh, N Singh
+                2016 IEEE Power and Energy Society General Meeting (PESGM), 1-5</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:ZeXyd9-uunAC">Impact of topology on the propagation of cascading failure in power grid
+                P Dey, R Mehra, F Kazi, S Wagh, NM Singh
+                IEEE Transactions on Smart Grid 7 (4), 1970-1978</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:a0OBvERweLwC">Blackout risk analysis in smart grid WAMPAC system using KL divergence approach
+                S Gupta, S Waghmare, F Kazi, S Wagh, N Singh
+                2016 IEEE 6th International Conference on Power Systems (ICPS), 1-6</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:hFOr9nPyWt4C">Dynamic phasor-based small-signal stability analysis and control of solid state transformer
+                M Parimi, M Monika, M Rane, S Wagh, A Stankovic
+                2016 IEEE 6th International Conference on Power Systems (ICPS), 1-6</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:-f6ydRqryjwC">Adaptive reference power algorithm for power sharing between inverters under varying source condition
+                MS Rane, SR Wagh
+                2016 IEEE 6th International Conference on Power Systems (ICPS), 1-6</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:iH-uZ7U-co4C">Productivity Enhancement by Using Cellular Manufacturing
+                RM Dhawale, SR Wagh
+                International Journal of Innovative Science, Engineering & Technology 3 (4)</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:hC7cP41nSMkC">PSLE_TOOL for power system transient stability investigation using Lyapunov Exponents
+                V Kamble, S Bhil, S Wagh, R Mendonca
+                2015 Conference on Power, Control, Communication and Computational …</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:7PzlFSSx8tAC">Sensorless Field Orientation Control of Induction Motor Using Reduced Order Observer
+                R Meshram, S Bahadure, S Matani, G Datkhile, T Kumar, S Wagh
+                National Power Electronics Conference, IIT Bombay</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:mVmsd5A6BfQC">Mixed potential function for a class of memristive circuits
+                S Doddi, R Ghule, S Wagh, F Kazi, NM Singh
+                2015 International Conference on Industrial Instrumentation and Control …</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:zYLM7Y9cAGgC">Simulation and analysis of an axial vircator using PIC code
+                M Maiti, D Tiwari, A Roy, N Singh, S Wagh
+                2015 Asia-Pacific Symposium on Electromagnetic Compatibility (APEMC), 1-5</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:4DMP91E08xMC">Real-time estimation of propagation of cascade failure using branching process
+                P Dey, M Parimi, A Yerudkar, SR Wagh
+                2015 IEEE 5th International Conference on Power Engineering, Energy and …</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:Wp0gIr-vW9MC">Power based modeling and stabilization of telegraphers equations
+                R Ghule, S Doddi, S Wagh, F Kazi, NM Singh
+                2015 International Conference on Smart Technologies and Management for …</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:9ZlFYXVOiuMC">Real time distributed control of variable speed drive system in cyber physical framework
+                N Pande, V Pagrut, R Meshram, F Kazi, N Singh, S Wagh
+                IFAC-PapersOnLine 48 (30), 357-362</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:8k81kl-MbHgC">Neural network based early warning system for an emerging blackout in smart grid power networks
+                S Gupta, F Kazi, S Wagh, R Kambli
+                Intelligent distributed computing, 173-183</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:_kc_bZDykSQC">Implementation of ZigBee/802.15. 4 in Smart Grid communication and analysis of power consumption: A case study
+                AY Mulla, JJ Baviskar, FS Kazi, SR Wagh
+                2014 Annual IEEE India Conference (INDICON), 1-7</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:kNdYIx-mwKoC">Support-vector-machine-based proactive cascade prediction in smart grid using probabilistic framework
+                S Gupta, R Kambli, S Wagh, F Kazi
+                IEEE Transactions on Industrial Electronics 62 (4), 2478-2486</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:KlAtU1dfN6UC">Wireless Power Transfer using microstrip antenna assigned with graded index lenses for WSN
+                V Singh, A Kukde, C Warty, S Wagh
+                2014 International Conference on Advances in Computing, Communications and …</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:hqOjcs7Dif8C">Probabilistic framework for evaluation of smart grid resilience of cascade failure
+                SR Gupta, FS Kazi, SR Wagh, NM Singh
+                2014 IEEE Innovative Smart Grid Technologies-Asia (ISGT ASIA), 255-260</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:UebtZRa9Y70C">Prediction of cascade failure using probabilistic approach with AC load flow
+                D Dagur, M Parimi, SR Wagh
+                2014 IEEE Innovative Smart Grid Technologies-Asia (ISGT ASIA), 542-547</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:J_g5lzvAfSwC">Failure Analysis And Evaluation Of A Composite Material Automotive Driveshaft By Using Fem-A Review
+                AB Rindhe, SR Wagh
+                International Journal of Mechanical Engineering and Robotics Research 3 (2), 353</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:bEWYMUwI8FkC">Finite element analysis of components of excavator arm-a review
+                RM Dhawale, SR Wagh
+                International Journal of Mechanical Engineering and Robotics Research 3 (2), 340</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:5nxA0vEk-isC">Resonance-based Wireless Power Transfer for smart grid systems
+                A Kukde, S Mattigiri, V Singh, C Warty, S Wagh
+                2014 IEEE Aerospace Conference, 1-6</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:4TOpqqG69KYC">Maximizing lifetime of wireless sensor networks using genetic approach
+                S Wagh, R Prasad
+                2014 IEEE International Advance Computing Conference (IACC), 215-219</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:Zph67rFs4hoC">Synchronization and transient stability in multi-machine power system through edge control using tcsc
+                S Kulkarni, S Wagh, F Kazi, N Singh
+                Proceedings of the Mathematical Theory of Networks and Systems MTNS</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:Tyk-4Ss8FVUC">Transient Stability Improvement of Multi-machine Power System using Higher Order Sliding Mode Control
+                M Irfan, S Kulkarni, P Kulkarni, S Wagh, NM Singh
+                IFAC Proceedings Volumes 47 (1), 1054-1060</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:Y0pCki6q_DkC">Energy-sorted Prony analysis for identification of dominant low frequency oscillations
+                VS Patel, SK Bhil, FS Kazi, SR Wagh
+                2013 Australian Control Conference, 85-90</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:ufrVoPGSRksC">Transient stability assessment and synchronization of multimachine power system using kuramoto model
+                S Sharma, S Kulkarni, A Maksud, SR Wagh, NM Singh
+                2013 North American Power Symposium (NAPS), 1-6</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:u-x6o8ySG0sC">Modes preserving wavelet based multi-scale PCA algorithm for compression of smart grid data
+                R Mehra, V Patel, F Kazi, NM Singh, SR Wagh
+                2013 International Conference on Advances in Computing, Communications and …</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:LkGwnXOMwfcC">Parformance—Based comparision of UPQC compensating signal generation algorithms under disstorted supply and non linear load conditions
+                SS Wamane, JR Baviskar, SR Wagh, S Kumar
+                2013 IEEE 8th Conference on Industrial Electronics and Applications (ICIEA) …</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:_FxGoFyzp5QC">Extraction of DC component and harmonic analysis for protection of power transformer
+                SR Wagh, S Kumar, V Sreeram
+                2013 IEEE 8th conference on industrial electronics and applications (ICIEA) …</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:ULOm3_A8WrAC">Prefluxing technique to mitigate inrush current of three-phase power transformer
+                PJ Kotak, J Singh
+                vol 4, 7</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:YsMSGLbcyi4C">A comparative study on compensating current generation algorithms for shunt active filter under non-linear load conditions
+                SS Wamane, JR Baviskar, SR Wagh
+                International journal of scientific and research publications 3 (6), 1-6</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:d1gkVwhDpl0C">Linear state estimation model using phasor measurement unit (PMU) technology
+                S Soni, S Bhil, D Mehta, S Wagh
+                2012 9th international conference on electrical engineering, computing …</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:YOwf2qJgpHMC">Robust WAM-based controller coordination of FACTS devices for power system transient stability enhancement
+                SR Wagh
+                University of Western Australia</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:0EnyYjriUFMC">Antibacterial and Antifungal Study of Synthesised Anthracenyl Based Triazole Cycloadducts
+                AV Karnik, VH Singh, SB Kotwal, J Sapre, T Tawde, P Tiwari, S Wagh, ...
+                Oriental Journal of Chemistry 27 (1), 321-324</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:UeHWp8X0CEIC">A nonlinear TCSC controller based on control Lyapunov function and receding horizon strategy for power system transient stability improvement
+                SR Wagh, AK Kamath, NM Singh
+                2009 IEEE International Conference on Control and Automation, 813-818</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:WF5omc3nYNoC">Predictive control-based facts devices for power system transient stability improvement
+                TT Nguyen, SR Wagh
+                8th International Conference on Advances in Power System Control, Operation …</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:2osOgNQ5qMEC">Model predictive control of facts devices for power system transient stability
+                TT Nguyen, SR Wagh
+                2009 Transmission & Distribution Conference & Exposition: Asia and Pacific, 1-4</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:qjMakFHDy7sC">Nonlinear model based control with prior knowledge based learning
+                Z Sun, Z Zhang, H Wang, M Jiang
+                2009 7th Asian Control Conference, 1576-1581</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:u5HHmVD_uO8C">Non-linear model predictive control for improving transient stability of power system using TCSC controller
+                SR Wagh, AK Kamath, NM Singh
+                2009 7th Asian Control Conference, 1627-1632</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:9yKSN-GCB0IC">Transient stability enhancement of power system using MPC based TCSC controller
+                SK Bhil, AK Kamath, NM Singh, SR Wagh
+                2009 IEEE Power & Energy Society General Meeting, 1-7</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:5Ul4iDaHHb8C">Results in Control and Optimization
+                R Gunjal, SS Nayyer, SR Wagh, NM Singh</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:NaGl4SEjCO4C">INTERNATIONAL JOURNAL OF ENGINEERING SCIENCES & RESEARCH TECHNOLOGY FAILURE ANALYSIS AND EVALUATION OF A COMPOSITE MATERIAL AUTOMOTIVE DRIVESHAFT BY USING FEM
+                AB Rindhe, SR Wagh</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:ns9cj8rnVeAC">Accelerated Distributed Primal-Dual Dynamics Using Adaptive Synchronization
+                NM SINGH</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:qUcmZB5y_30C">Theory of Complex Systems with Applications to Smart Grid Operations
+                A Tajer, I Dobson, S Kar, J Lavaei, L Xie, GC Zweigle, ...</a>
+        </li>
+        <li>
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JVYImqMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=JVYImqMAAAAJ:dhFuZR0502QC">Dynamic Phasor Based Compensator Design for Dual Active Bridge Using K Factor Approach
+                M Parimi, S Meshram, SR Wagh
+                </a>
+        </li>
+
+
+
+
+     </ol>   
+    </div>
+    <footer class="bg-dark text-white text-center py-3">
+        &copy; CDRC, VJTI 2024 All rights reserved.<br>
+        Website Developed By: Prachi Anand Kesarkar
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    </body>
+    </html>

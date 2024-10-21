@@ -1,0 +1,264 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CDRC LAB</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="hardware.css">
+    <script src="phd.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="container1">
+            <img src="images/CDRC_logo.jpg" alt="CDRC Logo">
+        </div>
+        <div class="container2">
+            <img src="images/EMC2_logo.jpg" alt="EMC2 Logo">
+        </div>
+        <div class="container3">
+          <img src="images/logo-light.gif" alt="">
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-size: larger;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="home.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownPeople" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">People</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPeople">
+                        <a class="dropdown-item" href="faculty.html">Faculty</a>
+                        <a class="dropdown-item" href="advisory.html">Advisory Board</a>
+                        <a class="dropdown-item" href="alumni.html">CDRC Alumni</a>
+                        <a class="dropdown-item" href="research_engg.html">Research Engineer</a>
+                        <a class="dropdown-item" href="phd.html">PhD Scholars</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownResearch" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Facilities</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownResearch">
+                        <a class="dropdown-item" href="hardware.html">List of Hardware</a>
+                        <a class="dropdown-item" href="software.html">List of Software</a>
+                        <a class="dropdown-item" href="infrastructure.html">Infrastructure</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownCollaborations" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collaborations</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownCollaborations">
+                        <a class="dropdown-item" href="industrial_collab.html">Industrial Collaborations</a>
+                        <a class="dropdown-item" href="academic_collab.html">Academic Collaborations</a>
+                        <!-- <a class="dropdown-item" href="#">Power Systems</a> -->
+                        <!-- <a class="dropdown-item" href="#">Control Systems</a> -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownActivities" role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivities">
+                        <!-- Technical Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Technical</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://drive.google.com/drive/folders/1edwXXfLUYIpTrmejfeHzBdy99pNKJoxp?usp=sharing" class="dropdown-item">Robotics Workshop</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1z2Fq6QVLwKguca1dbnBrLBvqH8az1UPg?usp=sharing" class="dropdown-item">SLAC Standford</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1bpB2an0GOQ7NjOkxxWE4wRRD6oila3X4?usp=sharing" class="dropdown-item">Prof S.D.V Lecture</a></li>
+
+                            </ul>
+                        </li>
+                        <!-- Non-Technical Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Non-Technical</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://drive.google.com/drive/folders/1pbk-ujaMGA6KxiO4CvWw1CVEs-FJZsas?usp=sharing" class="dropdown-item">GetTogether</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1YRzpwMh4AxuxMRkzepG2LJnBrVyon96l?usp=sharing" class="dropdown-item">Soft Launch</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1vPlsxAiOYbjOWUfXu_T4_aQ_piUbgFLf?usp=sharing" class="dropdown-item">Visitors</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1XmJMYR7-9LXfUQYrkCmJkruZZoRYHoZL?usp=sharing" class="dropdown-item">Visit for Bay Area</a></li>
+
+                            </ul>
+                            
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownPublications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPublications">
+                        <a class="dropdown-item" href="books.html">Books</a>
+                        <a class="dropdown-item" href="conference.html">Conference</a>
+                        <a class="dropdown-item" href="journal.html">Journal Papers</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://drive.google.com/drive/folders/1QgmFqPBw7pbbOG-LPkQfKHI1FCJDgZ5c?usp=sharing">Gallery</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownGallery" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGallery">
+                        <a class="dropdown-item" href="#">FDP/Workshops</a>
+                        <a class="dropdown-item" href="#">Trips and Other</a>
+                        <a class="dropdown-item" href="#">Conference</a>
+                    </div>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="museum.html">Museum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://sites.google.com/ee.vjti.ac.in/mr-vijay-sonavane/pnc-issues">PNC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://sites.google.com/ee.vjti.ac.in/actual-virtual-machines-lab/home">Labs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="career&internships.html">Career & Internships</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact_us.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+          <div class="content">
+            <u><p class="h1">Hardwares</p></u>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                       <br><br> <img src="images/typhoon.jpg" class="card-img-top" alt="Photo 1">
+                        <div class="card-body d-flex flex-column"><br>
+                            <a href="typhoon_doc.pdf"><h5 class="card-title">TYPHOON HIL</h5></a>
+                            <p class="card-text">Typhoon Hill specializes in advanced real-time simulation solutions for electrical
+                                 engineering, offering tools for testing and optimizing power systems. 
+                                Their technology enables precise modeling and analysis of complex electrical grids under various 
+                                conditions.</p> <br>
+                       <br> </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="images/dspace.jpg" style="margin-top: 30px; height: 80px; width: 250px;" class="card-img-top" alt="Photo 2">
+                        <div class="card-body d-flex flex-column">
+                           <a href="dspace.pdf"><br><br> <h5 class="card-title">DSPACE 1104</h5></a>
+                            <p class="card-text">The dSPACE 1104 is a real-time simulation and prototyping system used for developing 
+                                and testing control systems. It provides a high-performance platform for real-time simulation, 
+                                hardware-in-the-loop (HIL) testing, and rapid control prototyping.
+                                 The system supports various applications in automotive, aerospace, and industrial automation fields.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="images/stm32.jpg" class="card-img-top" alt="Photo 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">STM 32</h5>
+                            <p class="card-text">STM32 refers to a series of microcontrollers developed by
+                                 STMicroelectronics based on the ARM Cortex-M processor core. 
+                                 These microcontrollers are widely used in embedded systems for applications 
+                                 such as IoT, automotive, and industrial control due to their high performance,
+                                  low power consumption, and extensive peripheral features.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                       <br> <img src="images/arduino.jpg" class="card-img-top" alt="Photo 4">
+                       <br> <div class="card-body d-flex flex-column">
+                            <a href="arduino.pdf"><h5 class="card-title">ARDUINO NANO BLE 33 SENSE LITE</h5></a>
+                            <p class="card-text">The Arduino Nano BLE 33 Sense Lite is a compact microcontroller featuring Bluetooth 
+                                Low Energy (BLE) for wireless 
+                                communication. It includes various sensors for environmental monitoring, making it ideal for IoT
+                                 projects.</p></div><br><br>
+                  <br> </div><br>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Card 5 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="images/high-end-sys.jpg" class="card-img-top" alt="Photo 5">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">HIGH-END SYSTEMS</h5>
+                            <p class="card-text">High-end computer systems with 32 GB of RAM, a 1 TB storage drive, an Intel i9 processor,
+                                 and an 8 GB GPU are designed for intensive computational tasks and data analysis. These specifications 
+                                 provide exceptional processing power, fast data access, 
+                                and high-performance graphics, making them ideal for demanding applications and complex simulations.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card"><br>
+                        <img src="images/opal-rt.jpg" class="card-img-top" alt="Photo 6">
+                        <div class="card-body d-flex flex-column">
+                            <a href="OPAL.pdf"><h5 class="card-title">OPAL-RT</h5></a>
+                            <p class="card-text">The Opal RT 4500 is a real-time simulator used for 
+                                hardware-in-the-loop (HIL) testing in power systems. It delivers fast, 
+                                accurate simulations for validating technologies like smart grids.
+                                 Its versatile interfaces ensure smooth integration with physical devices.
+                            </p><br><br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <!-- <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="images/transformer2.jpg" class="card-img-top" alt="Photo 7">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">1:1 TRANSFORMER</h5>
+                            <p class="card-text">A 1:1 transformer is a type of transformer with equal primary and secondary winding 
+                                turns, providing no change in voltage between the input
+                                 and output. It is used for isolating circuits or transferring AC signals without altering voltage 
+                                 levels.</p>
+                            
+                        </div><br><br><br><br>
+                    </div>
+                </div> -->
+                <!-- Card 8 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                       <br><br><br> <img src="images/server_hpe.jpg" class="card-img-top" alt="Photo 8">
+                        <br><div class="card-body d-flex flex-column">
+                            <h5 class="card-title">SERVER HPE PROLIANT</h5>
+                            <p class="card-text">The HPE ProLiant is a series of servers from Hewlett 
+                                Packard Enterprise (HPE) designed for performance, scalability, and 
+                                reliability in enterprise environments. They offer a range of configurations, 
+                                including rack-mounted, tower, and blade servers, and are used for various 
+                                applications like data centers, cloud computing, and virtualization.
+                            </p>
+                            
+                        </div><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-dark text-white text-center py-3" style="margin-top: 4000px;">
+            &copy; CDRC, VJTI 2024 All rights reserved.<br>
+            Website Developed By: Prachi Anand Kesarkar
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+        
+          </body>
+          </html>
+
+
+
+

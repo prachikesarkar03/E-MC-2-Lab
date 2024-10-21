@@ -1,0 +1,183 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CDRC LAB</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="phd.css">
+    <script src="phd.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="container1">
+            <img src="images/CDRC_logo.jpg" alt="CDRC Logo" class="img-fluid">
+        </div>
+        <div class="container2">
+            <img src="images/EMC2_logo.jpg" alt="EMC2 Logo" class="img-fluid">
+        </div>
+        <div class="container3">
+          <img src="images/logo-light.gif" alt="" class="img-fluid">
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-size: larger;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="home.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownPeople" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">People</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPeople">
+                        <a class="dropdown-item" href="faculty.html">Faculty</a>
+                        <a class="dropdown-item" href="advisory.html">Advisory Board</a>
+                        <a class="dropdown-item" href="alumni.html">CDRC Alumni</a>
+                        <a class="dropdown-item" href="research_engg.html">Research Engineer</a>
+                        <a class="dropdown-item" href="phd.html">PhD Scholars</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownResearch" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Facilities</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownResearch">
+                        <a class="dropdown-item" href="hardware.html">List of Hardware</a>
+                        <a class="dropdown-item" href="software.html">List of Software</a>
+                        <a class="dropdown-item" href="infrastructure.html">Infrastructure</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownCollaborations" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collaborations</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownCollaborations">
+                        <a class="dropdown-item" href="industrial_collab.html">Industrial Collaborations</a>
+                        <a class="dropdown-item" href="academic_collab.html">Academic Collaborations</a>
+                        <!-- <a class="dropdown-item" href="#">Power Systems</a> -->
+                        <!-- <a class="dropdown-item" href="#">Control Systems</a> -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownActivities" role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivities">
+                        <!-- Technical Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Technical</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://drive.google.com/drive/folders/1edwXXfLUYIpTrmejfeHzBdy99pNKJoxp?usp=sharing" class="dropdown-item">Robotics Workshop</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1z2Fq6QVLwKguca1dbnBrLBvqH8az1UPg?usp=sharing" class="dropdown-item">SLAC Standford</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1bpB2an0GOQ7NjOkxxWE4wRRD6oila3X4?usp=sharing" class="dropdown-item">Prof S.D.V Lecture</a></li>
+
+                            </ul>
+                        </li>
+                        <!-- Non-Technical Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Non-Technical</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://drive.google.com/drive/folders/1pbk-ujaMGA6KxiO4CvWw1CVEs-FJZsas?usp=sharing" class="dropdown-item">GetTogether</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1YRzpwMh4AxuxMRkzepG2LJnBrVyon96l?usp=sharing" class="dropdown-item">Soft Launch</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1vPlsxAiOYbjOWUfXu_T4_aQ_piUbgFLf?usp=sharing" class="dropdown-item">Visitors</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1XmJMYR7-9LXfUQYrkCmJkruZZoRYHoZL?usp=sharing" class="dropdown-item">Visit for Bay Area</a></li>
+
+                            </ul>
+                            
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownPublications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPublications">
+                        <a class="dropdown-item" href="books.html">Books</a>
+                        <a class="dropdown-item" href="conference.html">Conference</a>
+                        <a class="dropdown-item" href="journal.html">Journal Papers</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://drive.google.com/drive/folders/1QgmFqPBw7pbbOG-LPkQfKHI1FCJDgZ5c?usp=sharing">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="museum.html">Museum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://sites.google.com/ee.vjti.ac.in/mr-vijay-sonavane/pnc-issues">PNC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://sites.google.com/ee.vjti.ac.in/actual-virtual-machines-lab/home">Labs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="career&internships.html">Career & Internships</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact_us.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+          <div class="content">
+            <u><p class="h1">Ph.D Scholars</p></u>
+        </div>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col-sm-10 d-flex justify-content-center">
+                    <div class="card text-center">
+                        <img class="card-img-top mx-auto" src="images/profile-user.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Revati Gunjal</h5>
+                            <p class="card-text">
+                                Designation: Research Scholar<br>
+                                <span class="email-text">Email: rgunjal_p21@ee.vjti.ac.in</span>
+                            </p>
+                            <p class="card-text">
+                                Working On:<br> Thesis Title: Control and optimization of uncertain systems.
+                            </p>
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="btn btn-primary">CV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-8 col-sm-10 d-flex justify-content-center">
+                    <div class="card text-center">
+                        <img class="card-img-top mx-auto" src="images/profile-user.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Varsha Shinde</h5>
+                            <p class="card-text">
+                                Designation: Research Scholar<br>
+                                <span class="email-text">Email: vshinde</span>
+                            </p>
+                            <p class="card-text">
+                                Working On:<br> Thesis Title: Large Scale Power System Analysis.
+                            </p>
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="btn btn-primary">CV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+    
+    
+          <footer class="bg-dark text-white text-center py-3">
+            &copy; CDRC, VJTI 2024 All rights reserved.<br>
+            Website Developed By: Prachi Anand Kesarkar
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+        
+          </body>
+          </html>

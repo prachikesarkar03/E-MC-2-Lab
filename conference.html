@@ -1,0 +1,406 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CDRC LAB</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="conference.css">
+    <script src="phd.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="container1">
+            <img src="images/CDRC_logo.jpg" alt="CDRC Logo">
+        </div>
+        <div class="container2">
+            <img src="images/EMC2_logo.jpg" alt="EMC2 Logo">
+        </div>
+        <div class="container3">
+          <img src="images/logo-light.gif" alt="">
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-size: larger;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="home.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownPeople" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">People</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPeople">
+                        <a class="dropdown-item" href="faculty.html">Faculty</a>
+                        <a class="dropdown-item" href="advisory.html">Advisory Board</a>
+                        <a class="dropdown-item" href="alumni.html">CDRC Alumni</a>
+                        <a class="dropdown-item" href="research_engg.html">Research Engineer</a>
+                        <a class="dropdown-item" href="phd.html">PhD Scholars</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownResearch" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Facilities</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownResearch">
+                        <a class="dropdown-item" href="hardware.html">List of Hardware</a>
+                        <a class="dropdown-item" href="software.html">List of Software</a>
+                        <a class="dropdown-item" href="infrastructure.html">Infrastructure</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownCollaborations" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collaborations</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownCollaborations">
+                        <a class="dropdown-item" href="industrial_collab.html">Industrial Collaborations</a>
+                        <a class="dropdown-item" href="academic_collab.html">Academic Collaborations</a>
+                        <!-- <a class="dropdown-item" href="#">Power Systems</a> -->
+                        <!-- <a class="dropdown-item" href="#">Control Systems</a> -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownActivities" role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivities">
+                        <!-- Technical Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Technical</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://drive.google.com/drive/folders/1edwXXfLUYIpTrmejfeHzBdy99pNKJoxp?usp=sharing" class="dropdown-item">Robotics Workshop</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1z2Fq6QVLwKguca1dbnBrLBvqH8az1UPg?usp=sharing" class="dropdown-item">SLAC Standford</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1bpB2an0GOQ7NjOkxxWE4wRRD6oila3X4?usp=sharing" class="dropdown-item">Prof S.D.V Lecture</a></li>
+
+                            </ul>
+                        </li>
+                        <!-- Non-Technical Dropdown -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Non-Technical</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://drive.google.com/drive/folders/1pbk-ujaMGA6KxiO4CvWw1CVEs-FJZsas?usp=sharing" class="dropdown-item">GetTogether</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1YRzpwMh4AxuxMRkzepG2LJnBrVyon96l?usp=sharing" class="dropdown-item">Soft Launch</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1vPlsxAiOYbjOWUfXu_T4_aQ_piUbgFLf?usp=sharing" class="dropdown-item">Visitors</a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1XmJMYR7-9LXfUQYrkCmJkruZZoRYHoZL?usp=sharing" class="dropdown-item">Visit for Bay Area</a></li>
+
+                            </ul>
+                            
+                        </li>
+
+                        
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownPublications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPublications">
+                        <a class="dropdown-item" href="books.html">Books</a>
+                        <a class="dropdown-item" href="conference.html">Conference</a>
+                        <a class="dropdown-item" href="journal.html">Journal Papers</a>
+                    </div>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownGallery" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGallery">
+                        <a class="dropdown-item" href="#">FDP/Workshops</a>
+                        <a class="dropdown-item" href="#">Trips and Other</a>
+                        <a class="dropdown-item" href="#">Conference</a>
+                    </div>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://drive.google.com/drive/folders/1QgmFqPBw7pbbOG-LPkQfKHI1FCJDgZ5c?usp=sharing">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="museum.html">Museum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://sites.google.com/ee.vjti.ac.in/mr-vijay-sonavane/pnc-issues">PNC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://sites.google.com/ee.vjti.ac.in/actual-virtual-machines-lab/home">Labs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="career&internships.html">Career & Internships</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact_us.html">Contact Us</a>
+                </li>
+                </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <u><p class="h1">Conferences</p></u>
+    </div>
+    <div class="main">
+        <ol>
+            <li>
+         <p><a href="https://ieeexplore.ieee.org/document/9837208">S. V, M. R. Mariya and M. Mamta, &quot;Dominant modes estimation using SCUSUM method
+         along with SSI,&quot; 2022 30th Mediterranean Conference on Control and Automation (MED),
+         Vouliagmeni, Greece, 2022, pp. 1047-1052, doi: 10.1109/MED54222.2022.9837208.
+         </a></p> 
+        </li>
+        <li>
+         <a href="https://ieeexplore.ieee.org/document/9966969">
+            M. R. Mariya, S. V. Shashank and M. Mamta, &quot;Robust Control of Adaptive Model Predictive
+Control using Online Model Estimation,&quot; 2022 Australian &amp; New Zealand Control
+Conference (ANZCC), Gold Coast, Australia, 2022, pp. 57-62, doi:
+10.1109/ANZCC56036.2022.9966969.</a>
+        </li>  
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9815777">
+            S. Gugaliya, D. D, S. Kumar and A. Sheikh, &quot;Data Driven Approach for Long Term
+            Forecasting of Renewable Energy Generation,&quot; 2022 4th Global Power, Energy and
+            Communication Conference (GPECOM), Nevsehir, Turkey, 2022, pp. 383-388, doi:
+            10.1109/GPECOM55404.2022.9815777.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/10072160">
+            D. D, S. J, S. Gugaliya and C. Mohini, &quot;Forecasting of Power Injected by DERs in Microgrid
+            using Delay Embedded Dynamic Mode Decomposition,&quot; 2022 IEEE PES 14th Asia-Pacific
+            Power and Energy Engineering Conference (APPEEC), Melbourne, Australia, 2022, pp. 1-6,
+            doi: 10.1109/APPEEC53445.2022.10072160.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10072202">
+            C. Mohini, G. Shubham, J. Dhanashree and S. J, &quot;Optimizing Power System Observability
+Using GAMS,&quot; 2022 IEEE PES 14th Asia-Pacific Power and Energy Engineering Conference
+(APPEEC), Melbourne, Australia, 2022, pp. 1-6, doi:
+10.1109/APPEEC53445.2022.10072202.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9966977">
+            C. Chaitali, J. Swapnil, S. Shadab, S. R. Wagh and N. M. Singh, &quot;Adaptive Control of Feedback
+Linearizable Systems with Finite-time Convergence,&quot; 2022 Australian &amp; New Zealand
+Control Conference (ANZCC), Gold Coast, Australia, 2022, pp. 75-80, doi:
+10.1109/ANZCC56036.2022.9966977.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9966972">
+            M. Raphel, R. Gunjal, S. R. Wagh and N. M. Singh, &quot;Optimization of Surrogate function using
+Extremum Seeking Control,&quot; 2022 Australian &amp; New Zealand Control Conference (ANZCC),
+Gold Coast, Australia, 2022, pp. 51-56, doi: 10.1109/ANZCC56036.2022.9966972.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9708197">
+            M. Raphel, P. J. Parvathi, R. Y. Hashim, R. J. Thevara and P. Deepasree Varma., &quot;Analysing
+Gender and Age Aspects of Cyberbullying through Online Social Media,&quot; 2021 International
+
+Conference on Advances in Computing and Communications (ICACC), Kochi, Kakkanad,
+India, 2021, pp. 1-8, doi: 10.1109/ICACC-202152719.2021.9708197.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9483140">
+            Sonam, K., Sutavani, S., Wagh, S.R., Kazi, F.S. and Singh, N.M., 2021, May. Optimal Control
+of Probabilistic Boolean Network using Embedding Framework. In 2021 American
+Control Conference (ACC) (pp. 1028-1033). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9480170">
+            Revati, G., Hozefa, J., Shadab, S., Sheikh, A., Wagh, S.R. and Singh, N.M., 2021, June. Smart
+building energy management: Load profile prediction using machine learning. In 2021
+29th Mediterranean Conference on Control and Automation (MED) (pp. 380-385). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9480230">
+            Hozefa, J., Shadab, S., Revati, G., Wagh, S.R. and Singh, N.M., 2021, June. Adaptive control
+            of nonlinear systems: Parametric and non-parametric approach. In 2021 29th
+            Mediterranean Conference on Control and Automation (MED) (pp. 1007-1012). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9628194">
+            Snehal, N., Pooja, W., Sonam, K., Wagh, S.R. and Singh, N.M., 2021, November. Control of
+an Acrobot system using reinforcement learning with probabilistic policy search. In
+2021 Australian &amp; New Zealand Control Conference (ANZCC) (pp. 68-73). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9628387">
+            Pooja, W., Snehal, N., Sonam, K., Wagh, S.R. and Singh, N.M., 2021, November. Effect of
+increased number of COVID-19 tests using supervised machine learning models. In
+2021 Australian &amp; New Zealand Control Conference (ANZCC) (pp. 131-136). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9318333">
+            Shadab, S., Hozefa, J., Wagh, S.R. and Singh, N.M., 2020, November. Parameter
+Convergence for Adaptive Control in Nonlinear System. In 2020 Australian and New
+Zealand Control Conference (ANZCC) (pp. 42-47). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9183150">
+            Akshay, P., Vrushabh, D., Sonam, K., Wagh, S. and Singh, N., 2020, September.
+Hamiltonian Monte Carlo based Path Integral for Stochastic Optimal Control. In 2020
+28th Mediterranean Conference on Control and Automation (MED) (pp. 254-259). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://arxiv.org/abs/2010.02738">
+            Bansode, P., Chinde, V., Wagh, S.R., Pasumarthy, R. and Singh, N.M., 2020. On the
+Geometry and Linear Convergence of Primal-Dual Dynamics. arXiv preprint
+arXiv:2010.02738.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9183040">
+            Sunny, K., Sheikh, A., Wagh, S. and Singh, N.M., 2020, September. Prediction and
+Classification of Temperature Data in Smart Building using Dynamic Mode
+Decomposition. In 2020 28th Mediterranean Conference on Control and Automation
+(MED) (pp. 1074-1079). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9147434">
+            Vrushabh, D., Shalini, K., Sonam, K., Wagh, S. and Singh, N.M., 2020, July. Adaptive
+Dynamic Programming for Optimal Synchronization of Kuramoto Oscillator. In 2020
+American Control Conference (ACC) (pp. 1755-1760). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9183351">
+            Vrushabh, D., Akshay, P., Sonam, K., Wagh, S. and Singh, N.M., 2020, September. Robust
+Path Integral Control on Stochastic Differential Games. In 2020 28th Mediterranean
+Conference on Control and Automation (MED) (pp. 665-670). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9143708">
+            Saija, A., Sonam, K., Kazi, F. and Singh, N.M., 2020, May. Coherency Identification in
+Multimachine Power Systems Using Dynamic Mode Decomposition. In 2020 European
+Control Conference (ECC) (pp. 1342-1347). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/8798489">
+            Asfia, U., Kamuni, V., Sutavani, S., Sheikh, A., Wagh, S. and Singh, N.M., 2019, July. A
+blockchain construct for energy trading against sybil attacks. In 2019 27th
+Mediterranean Conference on Control and Automation (MED) (pp. 422-427). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9105438">
+            Sheikh, A., Kamuni, V., Patil, A., Wagh, S. and Singh, N., 2019, December. Cyber attack
+and fault identification of hvac system in building management systems. In 2019 9th
+International Conference on Power and Energy Systems (ICPES) (pp. 1-6). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9105507">
+            Patil, A., Kamuni, V., Sheikh, A., Wagh, S. and Singh, N., 2019, December. A machine
+learning approach to distinguish faults and cyberattacks in smart buildings. In 2019 9th
+International Conference on Power and Energy Systems (ICPES) (pp. 1-6). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/8795795">
+            Moyalan, J., Sawant, M., Bhagyashree, U., Sheikh, A., Wagh, S. and Singh, N., 2019, June.
+Electric vehicle-power grid incorporation using distributed resource allocation
+approach. In 2019 18th European Control Conference (ECC) (pp. 3034-3039). IEEE.
+</a>        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/8798537">
+            Sawant, M., Moyalan, J., Bhagyashree, U., Sheikh, A., Wagh, S. and Singh, N., 2019, July.
+Power grid load management using electric vehicles: A distributed resource allocation
+approach. In 2019 27th Mediterranean Conference on Control and Automation (MED)
+(pp. 428-433). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://arxiv.org/abs/1905.04521">
+            Bansode, P.A., Chinde, V., Wagh, S.R., Pasumarthy, R. and Singh, N.M., 2019. On the
+exponential stability of projected primal-dual dynamics on a riemannian manifold.
+arXiv preprint arXiv:1905.04521.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9000303">
+            Mohite, S., Suryawanshi, U., Sheikh, A., Wagh, S. and Singh, N.M., 2019, October. Impact
+of temperature on state of charge estimation for an electric vehicle. In 2019 North
+American Power Symposium (NAPS) (pp. 1-6). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9000398">
+            Monika, M., Meshram, R., Wagh, S., Singh, N.M. and Stanković, A.M., 2019, October.
+Robust Control of Solid State Transformer using Dynamic Phasor based model with dq
+transformation. In 2019 North American Power Symposium (NAPS) (pp. 1-6). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9000327">
+            Bhagyashree, U., Sonam, K., Wagh, S.R. and Singh, N.M., 2019, October. Bifurcation point
+tracking in generator outage scenario using nested holomorphic embedding power flow
+method. In 2019 North American Power Symposium (NAPS) (pp. 1-6). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://arxiv.org/abs/1908.05235">
+            Sutavani, S., Sonam, K., Wagh, S. and Singh, N., 2019. Disturbance decoupling and
+instantaneous fault detection in Boolean Control Networks. arXiv preprint
+arXiv:1908.05235.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9105423">
+            Sawant, M., Moyalan, J., Koonamparampath, J., Sheikh, A., Wagh, S. and Singh, N., 2019,
+December. Building Temperature Control: A Distributed Escort Dynamical approach. In
+2019 9th International Conference on Power and Energy Systems (ICPES) (pp. 1-6).
+IEEE.</a>
+        </li>
+        <li>
+            <a href="https://arxiv.org/abs/1911.10338">
+            Bajaria, P.K., Wagh, S.R. and Singh, N.M., 2019. Interarea Oscillations &amp; Chimera in
+Power Systems. arXiv preprint arXiv:1911.10338.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9105456">
+            Mohit, F., Shrutika, C., Sonam, K. and Wagh, S., 2019, December. Tracing Voltage
+Collapse Point for Non-uniform Loading Using Holomorphic Embedding. In 2019 9th
+International Conference on Power and Energy Systems (ICPES) (pp. 1-6). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9000266">
+            Sonam, K., Wagh, S.R. and Singh, N.M., 2019, October. Synchronized Operating Point
+Stability of Multimachine Power System using Holomorphic Embedding in Kuramoto
+Framework. In 2019 North American Power Symposium (NAPS) (pp. 1-6). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/9105509">
+            Bhagyashree, U., Sawant, M., Moyalan, J., Alok, K., Sheikh, A. and Wagh, S., 2019,
+December. Optimal Scheduling of TCL and Storage Devices for Demand Side
+Management: A Game Theoretic Approach. In 2019 9th International Conference on
+Power and Energy Systems (ICPES) (pp. 1-6). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/8330159">
+            Nikhil, P., Sonam, K., Monika, M. and Wagh, S., 2018, March. Finite control set model
+predictive control for two level inverter with fixed switching frequency. In 2018 SICE
+International Symposium on Control Systems (SICE ISCS) (pp. 74-81). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/8431720">
+            Kosaraju, K.C., Chinde, V., Pasumarthy, R., Kelkar, A. and Singh, N.M., 2018, June.
+Differential passivity like properties for a class of nonlinear systems. In 2018 Annual
+American Control Conference (ACC) (pp. 3621-3625). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://arxiv.org/abs/1807.08679">
+            Bansode, P., Jadhav, S., Patil, M. and Singh, N., 2018. On a Potential Game-theoretic
+Approach to Event-triggered Distributed Resource Allocation. arXiv preprint
+arXiv:1807.08679.</a>
+        </li>
+        <li>
+            <a href="https://arxiv.org/abs/1807.08684">
+            Bansode, P., Bahadure, S. and Singh, N., 2018. Primal-Dual Gradient Flow Algorithm for
+Distributed Support Vector Machines. arXiv preprint arXiv:1807.08684.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/8550347">
+            Yerudkar, A., Del Vecchio, C., Singh, N. and Glielmo, L., 2018, June. Reachability and
+controllability of delayed switched Boolean control networks. In 2018 European
+Control Conference (ECC) (pp. 1863-1868). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/8307946/similar#similar">
+            Singh, N. and Bajaria, P.K., 2018, January. Frequency synchronisation of islanded
+microgrids using robust adaptation over Luré forms. In 2018 Indian Control Conference
+(ICC) (pp. 12-17). IEEE.</a>
+        </li>
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/8307945">
+            Sutavani, S., Sarda, K., Yerudkar, A. and Singh, N., 2018, January. Interpretation of
+complex reaction networks in boolean network framework. In 2018 Indian Control
+Conference (ICC) (pp. 7-11). IEEE.</a>
+        </li>
+        </ol>
+    </div>
+    <footer class="bg-dark text-white text-center py-3">
+        &copy; CDRC, VJTI 2024 All rights reserved.<br>
+        Website Developed By: Prachi Anand Kesarkar
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>    

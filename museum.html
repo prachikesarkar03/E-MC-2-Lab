@@ -1,0 +1,697 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CDRC LAB</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="museum.css">
+    
+    <script src="phd.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+</head>
+<body>
+        <div class="container">
+        <div class="container1">
+            <img src="images/CDRC_logo.jpg" alt="CDRC Logo">
+        </div>
+        <div class="container2">
+            <img src="images/EMC2_logo.jpg" alt="EMC2 Logo">
+        </div>
+        <div class="container3">
+          <img src="images/logo-light.gif" alt="">
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-size: larger;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="home.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownPeople" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">People</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPeople">
+                        <a class="dropdown-item" href="faculty.html">Faculty</a>
+                        <a class="dropdown-item" href="advisory.html">Advisory Board</a>
+                        <a class="dropdown-item" href="alumni.html">CDRC Alumni</a>
+                        <a class="dropdown-item" href="research_engg.html">Research Engineer</a>
+                        <a class="dropdown-item" href="phd.html">PhD Scholars</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownResearch" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Facilities</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownResearch">
+                        <a class="dropdown-item" href="hardware.html">List of Hardware</a>
+                        <a class="dropdown-item" href="software.html">List of Software</a>
+                        <a class="dropdown-item" href="infrastructure.html">Infrastructure</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownCollaborations" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collaborations</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownCollaborations">
+                        <a class="dropdown-item" href="industrial_collab.html">Industrial Collaborations</a>
+                        <a class="dropdown-item" href="academic_collab.html">Academic Collaborations</a>
+                        <!-- <a class="dropdown-item" href="#">Power Systems</a> -->
+                        <!-- <a class="dropdown-item" href="#">Control Systems</a> -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownActivities" role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivities">
+                      <!-- Technical Dropdown -->
+                      <li class="dropdown-submenu">
+                          <a class="dropdown-item dropdown-toggle" href="#">Technical</a>
+                          <ul class="dropdown-menu">
+                              <li><a href="https://drive.google.com/drive/folders/1edwXXfLUYIpTrmejfeHzBdy99pNKJoxp?usp=sharing" class="dropdown-item">Robotics Workshop</a></li>
+                              <li><a href="https://drive.google.com/drive/folders/1z2Fq6QVLwKguca1dbnBrLBvqH8az1UPg?usp=sharing" class="dropdown-item">SLAC Standford</a></li>
+                              <li><a href="https://drive.google.com/drive/folders/1bpB2an0GOQ7NjOkxxWE4wRRD6oila3X4?usp=sharing" class="dropdown-item">Prof S.D.V Lecture</a></li>
+
+                          </ul>
+                      </li>
+                      <!-- Non-Technical Dropdown -->
+                      <li class="dropdown-submenu">
+                          <a class="dropdown-item dropdown-toggle" href="#">Non-Technical</a>
+                          <ul class="dropdown-menu">
+                              <li><a href="https://drive.google.com/drive/folders/1pbk-ujaMGA6KxiO4CvWw1CVEs-FJZsas?usp=sharing" class="dropdown-item">GetTogether</a></li>
+                              <li><a href="https://drive.google.com/drive/folders/1YRzpwMh4AxuxMRkzepG2LJnBrVyon96l?usp=sharing" class="dropdown-item">Soft Launch</a></li>
+                              <li><a href="https://drive.google.com/drive/folders/1vPlsxAiOYbjOWUfXu_T4_aQ_piUbgFLf?usp=sharing" class="dropdown-item">Visitors</a></li>
+                              <li><a href="https://drive.google.com/drive/folders/1XmJMYR7-9LXfUQYrkCmJkruZZoRYHoZL?usp=sharing" class="dropdown-item">Visit for Bay Area</a></li>
+
+                          </ul>
+                          
+                      </li>
+
+                      
+                  </ul>
+              </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownPublications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPublications">
+                        <a class="dropdown-item" href="books.html">Books</a>
+                        <a class="dropdown-item" href="conference.html">Conference</a>
+                        <a class="dropdown-item" href="journal.html">Journal Papers</a>
+                    </div>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownGallery" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGallery">
+                        <a class="dropdown-item" href="#">FDP/Workshops</a>
+                        <a class="dropdown-item" href="#">Trips and Other</a>
+                        <a class="dropdown-item" href="#">Conference</a>
+                    </div>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link active" href="https://drive.google.com/drive/folders/1QgmFqPBw7pbbOG-LPkQfKHI1FCJDgZ5c?usp=sharing">Gallery</a>
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="museum.html">Museum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://sites.google.com/ee.vjti.ac.in/mr-vijay-sonavane/pnc-issues">PNC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://sites.google.com/ee.vjti.ac.in/actual-virtual-machines-lab/home">Labs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="career&internships.html">Career & Internships</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact_us.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <u><p class="h1">Museum</p></u>
+    </div>
+    
+    <div class="video-banner">
+        <video autoplay muted loop>
+            <source src="images/museum.mp4" type="video/mp4">
+        </video>
+    </div>
+
+<div class="card-title1">
+    <p style="text-align: center;">The electrical department's museum displays a range of historical and modern 
+        electrical equipment, illustrating the evolution of technology. Highlights include early 
+        generators and contemporary innovations.
+    </p>
+</div>
+<div class="card-title2 card-body2"><b>EQUIPMENTS</b></div>
+
+<div class="container">
+    <div class="row">
+    <!-- 1 -->
+        <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/1.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-1.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/2.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Precision Condenser Model 274-M</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-2.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/3.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Radart Decade Capacitor Box</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-3.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/3,4.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Decade Capacitor Box</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-4.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/5.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Osaw Ballistic Galvanometer</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-5.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/6.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Portable Precision Water Meter </h5>
+            <div class="text-center">
+                <a href="museum_docs/image-6.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/7.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-7.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/8.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;"> Tinsley’s Vernier Potentiometer </h5>
+            <div class="text-center">
+                <a href="museum_docs/image-8.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 9 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/9.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Vernier Potentiometer Type 4353</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-9.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 10 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/10.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Crompton Potentiometer</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-10.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 11 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/11.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-11.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 12 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/12.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Co-ordinate A.C. Potentiometer</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-12.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 13 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/13.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-13.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 14 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/14.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-14.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 15 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/15.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-15.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 16 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/16.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-16.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 17 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/17.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-17.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 18 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/18.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;"> Jp Hall and Co makers oldham motor dc 
+                motor </h5>
+            <div class="text-center">
+                <a href="museum_docs/image-18.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 19 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/19.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-19.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 20 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/20.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-20.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 21 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/21.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-21.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 22 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/22.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-22.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 23 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/23.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;"> Tachometer </h5>
+            <div class="text-center">
+                <a href="museum_docs/image-23.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 24 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/24.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-24.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 25 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/25.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-25.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 26 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/26.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-26.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 27 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/27.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-27.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 28 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/28.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-28.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 29 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/29.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Jacquet Mechanical Hand Tachometer type 2200 </h5>
+            <div class="text-center">
+                <a href="museum_docs/image-29.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 30 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/30.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;"> General Electric’s AC Kilowatt Meter </h5>
+            <div class="text-center">
+                <a href="museum_docs/image-30.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 31 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/31.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Prestige Counting Instruments Vintage 
+                Tachometer 300-1500</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-31.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 32 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/32.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-32.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 33 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/33.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Shaffer Pocket Watch – Instrument Number 33</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-33.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 34 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/34.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Venture handheld tachometer</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-34.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 35 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/35.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-35.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 36 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/36.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">Dynamometer Portable Type Analog Wattmeter </h5>
+            <div class="text-center">
+                <a href="museum_docs/image-36.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 37 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/37.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-37.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- 38 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="museum_docs/images/38.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title h5" style="color: darkblue;">General Electric Double Bridge</h5>
+            <div class="text-center">
+                <a href="museum_docs/image-38.pdf" target="_blank">
+                  <button class="btn btn-primary">Know More</button>
+                </a>
+              </div>
+        </div>
+        </div>
+      </div>
+      
+      
+
+
+<footer class="bg-dark text-white text-center py-3">
+    &copy; CDRC, VJTI 2024 All rights reserved.<br>
+    Website Developed By: Prachi Anand Kesarkar
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
